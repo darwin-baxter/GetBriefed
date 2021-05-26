@@ -34,7 +34,7 @@ app.post("/",function(req,res){
     }
 
     const jsonData= JSON.stringify(data);
-    const url = "https://us6.api.mailchimp.com/3.0/lists/ccb40f9ea5d";
+    const url = "https://us6.api.mailchimp.com/3.0/lists/cb40f9ea5d";
 
     const options={
         method:"post",
@@ -59,7 +59,7 @@ app.post("/",function(req,res){
 app.post('/failure', function(req,res){
     res.redirect("/");
 });
-app.listen(5000,function(){
+app.listen((process.env.PORT||5000),function(){
     console.log("Server up and running at 5000.");
 });
 
